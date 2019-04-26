@@ -1,0 +1,123 @@
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Charmerly.com</title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="ch.favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-wrap">
+            <img class="header-logo" src="https://i.gstatvb.com/91888296aa77550a8a686848a8dbf12e.rng.png" alt="">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="container">
+        <div class="step-wrap">
+            <div class="slider">
+                <img src="https://i.gstatvb.com/a5ddbd9330f9912ef5393891d9056caa.rng.png" alt="">
+                <img src="https://i.gstatvb.com/0dcd3ef359c9a82ccf14bc6e16541828.rng.png" alt="">
+                <img src="https://i.gstatvb.com/3f28f9dfebb7ffe722452b0f5bbf7440.rng.png" alt="">
+                <img src="https://i.gstatvb.com/e01a5643d966bb67a93e80a93ba033bf.rng.png" alt="">
+                <img src="https://i.gstatvb.com/f354bae6d3fd88e95310e227e97c0275.rng.png" alt="">
+                <img src="https://i.gstatvb.com/2531ca710f20325fd9b6920ea94f3f51.rng.png" alt="">
+            </div>
+            <div class="step-content step-count-1" id="js-step">
+                <div class="step step-1">
+                    <h3 class="step-content_title">We are not a typical site anyone can join. <br>
+                        We care about the comfort of our members. So we need to be sure that you fit in. Please, provide
+                        honest answers to these simple questions.</h3>
+                    <div class="step-content_btn center">
+                        <button onclick="nextStep()">CONTINUE</button>
+                    </div>
+                </div>
+                <div class="step step-2">
+                    <h3 class="step-content_title">Are you a man or a woman?</h3>
+                    <div class="step-content_btn">
+                        <button onclick="nextStep()">I’m a woman</button>
+                        <button onclick="nextStep()">I’m a man</button>
+                    </div>
+                </div>
+                <div class="step step-3">
+                    <h3 class="step-content_title">How often do you look for romantic partners in web?</h3>
+                    <div class="step-content_btn width280">
+                        <button onclick="nextStep()">Never before</button>
+                        <button onclick="nextStep()">Sometimes</button>
+                        <button onclick="nextStep()">Regularly</button>
+                    </div>
+                </div>
+                <div class="step step-4">
+                    <h3 class="step-content_title">You usually like:</h3>
+                    <div class="step-content_btn stretch">
+                        <button onclick="nextStep()">Good-looking people </button>
+                        <button onclick="nextStep()">Smart people </button>
+                        <button onclick="nextStep()">People with a sense of humor </button>
+                    </div>
+                </div>
+                <div class="step step-5">
+                    <h3 class="step-content_title">What do you think about love at first sight?</h3>
+                    <div class="step-content_btn width280">
+                        <button onclick="nextStep()">It exists</button>
+                        <button onclick="nextStep()">It doesn’t exist</button>
+                    </div>
+                </div>
+                <div class="step step-6">
+                    <h3 class="step-content_title">Congratulations! <br>
+                        Now you can create your user account on our site.</h3>
+                    <div class="step-content_btn center">
+                        <a href="https://charmerly.com">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-info">
+                © Copyright 2013-2019. All Rights Reserved.
+            </div>
+            <ul class="footer-nav">
+                <li><a href="https://charmerly.com/#/public/about-us" target="_blank">ABOUT US</a></li>
+                <li><a href="https://charmerly.com/" target="_blank">Contact us</a></li>
+                <li><a href="https://charmerly.com/#/public/terms-of-use" target="_blank">TERMS OF USE</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+    var stepNum = 1;
+    var step = document.getElementById('js-step');
+    var className;
+
+    function nextStep() {
+        $('.slider').slick('slickNext');
+        className = 'step-count-' + stepNum;
+        step.classList.remove(className);
+        stepNum = stepNum + 1;
+        className = 'step-count-' + stepNum;
+        step.classList.add(className);
+    }
+</script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            draggable: false,
+        });
+    });
+</script>
+</body>
+</html>

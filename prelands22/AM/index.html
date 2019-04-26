@@ -1,0 +1,103 @@
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>AsianMelodies.com</title>
+    <meta name="viewport" content="user-scalable=0, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="asianmelodies.favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header-wrap">
+            <img class="header-logo" src="https://i.gstatvb.com/shpzkltfd6hdbq2i4.4d700d2a.png" alt="">
+        </div>
+    </div>
+</header>
+<main class="main">
+    <div class="step-wrap">
+        <div class="step-line"></div>
+        <div class="container">
+            <div class="step-content step-count-1" id="js-step">
+                <div class="step step-1">
+                    <h3 class="step-content_title">We are a site for quality singles looking for a meaningful
+                        connection.
+                        And we want to be sure that you fit us in.
+                        Please answer a short questionnaire.
+                    </h3>
+                    <div class="step-content_btn center">
+                        <button onclick="nextStep()">CONTINUE</button>
+                    </div>
+                </div>
+                <div class="step step-2">
+                    <h3 class="step-content_title">What is your gender?</h3>
+                    <div class="step-content_btn center">
+                        <button onclick="nextStep()">MALE</button>
+                        <button onclick="nextStep()">FEMALE</button>
+                    </div>
+                </div>
+                <div class="step step-3">
+                    <h3 class="step-content_title">How often do you meet on the internet?</h3>
+                    <div class="step-content_btn stretch">
+                        <button onclick="nextStep()">This is the first time </button>
+                        <button onclick="nextStep()">Sometimes</button>
+                        <button onclick="nextStep()">Very often</button>
+                    </div>
+                </div>
+                <div class="step step-4">
+                    <h3 class="step-content_title">Your romantic partner should be:</h3>
+                    <div class="step-content_btn stretch">
+                        <button onclick="nextStep()">Good-looking</button>
+                        <button onclick="nextStep()">Smart & Intelligent</button>
+                        <button onclick="nextStep()">Kind & Funny</button>
+                    </div>
+                </div>
+                <div class="step step-5">
+                    <h3 class="step-content_title">Do you believe in attraction at first sight?</h3>
+                    <div class="step-content_btn center">
+                        <button onclick="nextStep()">Yes</button>
+                        <button onclick="nextStep()">No</button>
+                    </div>
+                </div>
+                <div class="step step-6">
+                    <h3 class="step-content_title"><span>Congratulations!</span> <br>
+                        You have successfully passed our test.</h3>
+                    <div class="step-content_btn center">
+                        <a href="https://asianmelodies.com">Continue</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-wrap">
+            <div class="footer-info">
+                © Copyright 2013-2019. All Rights Reserved.
+            </div>
+            <ul class="footer-nav">
+                <li><a href="https://asianmelodies.com/#/public/about-us" target="_blank">ABOUT US</a></li>
+                <li><a href="https://asianmelodies.com/" target="_blank">Contact us</a></li>
+                <li><a href="https://asianmelodies.com/#/public/terms-of-use" target="_blank">TERMS OF USE</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+    var stepNum = 1;
+    var step = document.getElementById('js-step');
+    var className;
+
+    function nextStep() {
+        className = 'step-count-' + stepNum;
+        step.classList.remove(className);
+        stepNum = stepNum + 1;
+        className = 'step-count-' + stepNum;
+        step.classList.add(className);
+    }
+</script>
+</body>
+</html>
