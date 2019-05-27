@@ -92,6 +92,8 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script>
     var stepNum = 1;
     var step = document.getElementById('js-step');
@@ -105,17 +107,16 @@
         className = 'step-count-' + stepNum;
         step.classList.add(className);
     }
-</script>
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script>
+
     $(document).ready(function () {
         $('.slider').slick({
-            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             draggable: false,
+            swipe: false,
+            centerMode: true,
+            focusOnSelect: true,
         });
     });
 </script>
